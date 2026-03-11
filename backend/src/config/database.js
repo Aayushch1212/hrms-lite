@@ -1,17 +1,15 @@
-const Database = require("better-sqlite3");
+const { DatabaseSync } = require("node:sqlite");
 const path = require("path");
 
 const DB_PATH = process.env.DB_PATH
   ? path.resolve(process.env.DB_PATH)
-  : path.join(__dirname, "../../hrms.db");
+  : path.join(__dirname, "../../../hrms.db");
 
 let db;
 
 function getDb() {
   if (!db) {
-    db = new Database(DB_PATH);
-    db.pragma("journal_mode = WAL");
-    db.pragma("foreign_keys = ON");
+    db = new DatabaseSync(DB_PATH);
     initSchema(db);
   }
   return db;
@@ -38,7 +36,7 @@ function initSchema(db) {
     );
 
     CREATE INDEX IF NOT EXISTS idx_attendance_employee ON attendance(employee_id);
-    CREATE INDEX IF NOT EXISTS idx_attendance_date    ON attendance(date);
+    CREATE INDEX IF NOT EXISTS idx_attendance_date ON attendance(date);
   `);
 }
 
