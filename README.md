@@ -173,28 +173,6 @@ npm run dev
 
 ---
 
-## 🚀 Deployment
-
-### Backend → Render
-
-1. Push to GitHub
-2. [render.com](https://render.com) → New Web Service → connect repo
-3. **Root directory**: `backend`
-4. **Build**: `npm install`
-5. **Start**: `npm start`
-6. Add env var: `NODE_ENV=production`
-7. Copy the URL (e.g. `https://hrms-api.onrender.com`)
-
-### Frontend → Netlify
-
-1. Update `frontend/.env`: `VITE_API_BASE_URL=https://hrms-api.onrender.com/api`
-2. [netlify.com](https://netlify.com) → Add site → Deploy manually OR connect GitHub
-3. **Build command**: `npm run build`
-4. **Publish directory**: `dist`
-5. The `netlify.toml` at root handles SPA routing automatically
-
----
-
 ## ✅ Features Implemented
 
 ### Core
