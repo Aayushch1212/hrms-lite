@@ -1,6 +1,6 @@
 # HRMS Lite — Human Resource Management System
 
-A production-ready full-stack HRMS application built for the Ethara AI technical assessment.
+
 
 ---
 
