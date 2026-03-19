@@ -9,7 +9,7 @@ A production-ready full-stack HRMS application built for the Ethara AI technical
 | | URL |
 |---|---|
 | **Frontend** | _Your Netlify URL_ |
-| **Backend API** | _Your Render URL_ |
+| **Backend API** | https://hrms-lite-nduo.onrender.com |
 | **Health Check** | `GET /api/health` |
 
 ---
